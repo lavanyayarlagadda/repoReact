@@ -1,3 +1,78 @@
-#heading{
-    color: green;
+.header{
+   display: flex; 
+   justify-content: space-between;
+   border-bottom: 1px solid gray;
+   padding-bottom: 8px;
+}
+.img{
+    width: 100px;
+    height: 100px;
+}
+.nav{
+    display: flex;
+}
+.nav-list {
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+}
+.nav-list:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+.restaurant-cards{
+    width:200px;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid white;
+    border-radius: 2%;
+    padding: 6px;
+    margin: 5px;
+    cursor: pointer;
+    height: 250px;
+}
+.search{
+    margin: 10px;
+}
+.foodItem-img{
+    width:200px;
+    height:100px;
+}
+.restaurant-cards:hover{
+    border: 2px solid black;
+    border-radius: 2%;
+}
+.restaurants-render{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.button{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+   
+}
+
+.shimmering{
+    display: flex;
+    flex-wrap: wrap; 
+}
+.shimmering-cards{
+    width:200px;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid white;
+    border-radius: 2%;
+    padding: 6px;
+    margin: 5px;
+    cursor: pointer;
+    height: 250px;
+}
+.shimmer-name{
+    width:200px;
+    height:100px;
+    background-color: lightgrey;
+    border: 1px solid white;
+    border-radius: 2%;
+    margin-top: 2px;
 }
