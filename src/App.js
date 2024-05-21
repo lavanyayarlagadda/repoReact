@@ -2,7 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
+import App1 from "./App1";
+import About from "./Components/About";
+import Error from "./Components/Error";
+import ContactUs from "./Components/ContactUs";
 
 // This structure printed in the below in core react by using React.createElement
 /* <div id="parent">
@@ -53,20 +57,25 @@ import { createBrowserRouter } from "react-router-dom";
 //   )
 //  }
 
-
-
-
-
-
-
-
 const App = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      <Outlet />
     </div>
   );
 };
+const createRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <Body /> },
+      { path: "/aboutUs", element: <About /> },
+      { path: "/contactUs", element: <ContactUs /> },
+    ],
+    errorElement: <Error />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(<RouterProvider router={createRouter} />);
