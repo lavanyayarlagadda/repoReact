@@ -2,6 +2,7 @@ import Restaurants from "./Crads";
 import Search from "./Search";
 import restData from "../utils/mock.json";
 import { useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
 
 const Body = () => {
   const [restaurantData, setRestaurantData] = useState([]);
@@ -25,7 +26,6 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  
 
   return (
     <div>
@@ -93,11 +93,14 @@ const Body = () => {
           </button>
           <div className="restaurants-render">
             {filterSearch.length > 0 &&
-              filterSearch?.map((restaurants) => (
-                <Restaurants
-                  key={restaurants?.info?.id}
-                  resData={restaurants}
-                />
+              filterSearch.map((restaurants) => (
+                <Link
+                  key={restaurants?.id}
+                  to={`/restaurant/${restaurants?.id}`}
+                  class="custom-link"
+                >
+                  <Restaurants resData={restaurants} />
+                </Link>
               ))}
           </div>
         </div>

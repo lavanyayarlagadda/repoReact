@@ -1,7 +1,7 @@
 import { restaurant_URL } from "../utils/utils";
 
 const Restaurants = (props) => {
-  console.log(props,"properties");
+  console.log(props.resData,"PROPSDATA");
     const {name,cuisines,avgRating,cloudinaryImageId} = props.resData ;
       return (
        

@@ -7,6 +7,7 @@ import App1 from "./App1";
 import About from "./Components/About";
 import Error from "./Components/Error";
 import ContactUs from "./Components/ContactUs";
+import RestaurantsDetails from "./Components/RestaurantsDetails";
 
 // This structure printed in the below in core react by using React.createElement
 /* <div id="parent">
@@ -73,6 +74,7 @@ const createRouter = createBrowserRouter([
       { path: "/", element: <Body /> },
       { path: "/aboutUs", element: <About /> },
       { path: "/contactUs", element: <ContactUs /> },
+      { path: "/restaurant/:resId", element: <RestaurantsDetails /> }
     ],
     errorElement: <Error />,
   },

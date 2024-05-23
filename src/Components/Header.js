@@ -9,9 +9,9 @@ const Header = () => {
         <img className="img" src={FoodIcon} alt="Food-Logo"></img>
         <ul className="nav">
           <li className="nav-list">
-            <Link to='/'>HOME</Link>  </li>
-          <li className="nav-list"><Link to='/aboutUs'> ABOUT US</Link> </li>
-          <li className="nav-list"><Link to='/contactUs'> CONTACT US </Link></li>
+            <Link to='/' class="custom-link">HOME</Link>  </li>
+          <li className="nav-list"><Link to='/aboutUs' class="custom-link"> ABOUT US</Link> </li>
+          <li className="nav-list"><Link to='/contactUs' class="custom-link"> CONTACT US </Link></li>
           <li className="nav-list"> CART </li>
         </ul>
       </div>
